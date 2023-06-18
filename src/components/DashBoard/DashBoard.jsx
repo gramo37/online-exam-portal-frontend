@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbar from "../Navbar/Navbar";
 import "./DashBoard.css";
 import headerImage from "./images/header.png";
@@ -13,7 +13,7 @@ import pageImage2 from "./images/page2Image.png";
 import pageImage3 from "./images/page3Image.png";
 import videoBgImage from "./images/videobg.jpg";
 
-import {motion} from "framer-motion"
+// import {motion} from "framer-motion"
 
 import { Link } from "react-router-dom";
 
@@ -51,9 +51,9 @@ const DashBoardInfo = ({ bgImage, title, desc, image, align }) => {
       whileInView={{opacity: 1}}
       style={{ backgroundImage: `url(${bgImage})` }} className="dashboard-header">
       <div className="dashboard-overlay"></div>
-      <div className="dashboard-header-container" style={{ flexDirection: `${align == "left" ? "row-reverse" : "row"}` }}>
+      <div className="dashboard-header-container" style={{ flexDirection: `${align === "left" ? "row-reverse" : "row"}` }}>
         <div className={`dashboard-header-image`}>
-          <img className="showHeaderContent" src={image} alt="Header-Image" />
+          <img className="showHeaderContent" src={image} alt="Logo" />
         </div>
         <div className="showHeaderContent dashboard-header-content">
           <h1>{title}</h1>
